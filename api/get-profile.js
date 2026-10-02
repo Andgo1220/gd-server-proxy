@@ -19,7 +19,7 @@ export default async function handler(req, res) {
       secret: "Wmfd2893gb7"     // Standard GD secret key
     });
 
-    const gdResponse = await fetch("http://boomlings.com/database/getGJUsers20.php", {
+    const gdResponse = await fetch("https://boomlings.com/database/getGJUsers20.php", {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
