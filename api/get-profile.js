@@ -7,7 +7,7 @@ export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' });
 
   try {
-    const bodyParams = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
+    const bodyParams = req.body;
 
     if (!bodyParams.username) {
       return res.status(400).json({ error: "Missing 'username' parameter." });
